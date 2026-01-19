@@ -89,6 +89,8 @@ body {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    text-decoration: none;
+    color: inherit;
 }
 
 .logo-text {
@@ -713,3 +715,104 @@ textarea {
 
 
 
+
+.site-header-internal {
+    position: relative;
+}
+
+/* Policy page */
+.policy-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: white;
+    border-radius: var(--radius-m);
+    box-shadow: var(--shadow-soft);
+}
+
+.policy-content h1 {
+    color: var(--color-accent);
+    margin-bottom: 2rem;
+}
+
+.policy-content h2 {
+    color: var(--color-text);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.policy-content p {
+    margin-bottom: 1rem;
+}
+
+.policy-content ul {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 2rem;
+    color: var(--color-accent);
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* Cookie Banner */
+#cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #111827;
+    color: #f9fafb;
+    padding: 16px;
+    font-size: 14px;
+    z-index: 9999;
+    display: none;
+}
+
+.cookie-banner-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cookie-banner-text {
+    flex: 1 1 240px;
+}
+
+.cookie-banner-text a {
+    color: #93c5fd;
+    text-decoration: underline;
+}
+
+.cookie-banner-btns {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-cookie-accept {
+    padding: 8px 12px;
+    border: none;
+    background: #10b981;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn-cookie-decline {
+    padding: 8px 12px;
+    border: 1px solid #6b7280;
+    background: transparent;
+    color: #e5e7eb;
+    cursor: pointer;
+    border-radius: 4px;
+}

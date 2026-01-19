@@ -90,11 +90,18 @@
             "availableLanguage": [
                 "French",
                 "English"
-            ]
+            ],
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "5",
+                "reviewCount": "2",
+                "bestRating": "5",
+                "worstRating": "1"
+            }
         }
     </script>
 
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-93D0N6B8JM"></script>
@@ -120,11 +127,11 @@
 <body>
 <header class="site-header">
     <div class="container header-inner">
-        <div class="logo">
+        <a href="/" class="logo">
             <img src="logos/logo-wd-icon.png" alt="Logo Webben Digital - Abdessamad Benali" class="logo-img" width="50"
                  height="50">
             <span class="logo-text">Abdessamad Benali - Webben Digital</span>
-        </div>
+        </a>
         <nav class="main-nav">
             <button class="nav-toggle" aria-label="Ouvrir le menu">
                 ☰
@@ -521,55 +528,26 @@
         <p>© <span id="year"></span> Abdessamad Benali – Consultant PHP/Symfony.</p>
         <p><a href="mailto:webben.digital@gmail.com">webben.digital@gmail.com</a></p>
     </div>
-
-    <!-- Testimonials Schema -->
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "AggregateRating",
-            "itemReviewed": {
-                "@type": "ProfessionalService",
-                "name": "Abdessamad Benali – Webben Digital"
-            },
-            "ratingValue": "5",
-            "reviewCount": "2",
-            "bestRating": "5",
-            "worstRating": "1"
-        }
-    </script>
 </footer>
-<div id="cookie-banner" style="
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #111827;
-  color: #f9fafb;
-  padding: 16px;
-  font-size: 14px;
-  z-index: 9999;
-  display: none;
-">
-    <div style="max-width: 960px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between;">
-        <div style="flex: 1 1 240px;">
+<div id="cookie-banner">
+    <div class="cookie-banner-inner">
+        <div class="cookie-banner-text">
             Ce site utilise des cookies de mesure d’audience (Google Analytics).
             Vous pouvez accepter ou refuser ces cookies.
-            <a href="/politique-confidentialite.html" style="color:#93c5fd; text-decoration:underline;">En savoir
-                plus</a>
+            <a href="/confidential-policies.html">En savoir plus</a>
         </div>
-        <div style="display:flex; gap:8px;">
-            <button id="cookie-accept"
-                    style="padding:8px 12px; border:none; background:#10b981; color:white; cursor:pointer; border-radius:4px;">
+        <div class="cookie-banner-btns">
+            <button id="cookie-accept" class="btn-cookie-accept">
                 Accepter
             </button>
-            <button id="cookie-decline"
-                    style="padding:8px 12px; border:1px solid #6b7280; background:transparent; color:#e5e7eb; cursor:pointer; border-radius:4px;">
+            <button id="cookie-decline" class="btn-cookie-decline">
                 Refuser
             </button>
         </div>
     </div>
 </div>
+<script src="js/main.js" defer></script>
 <script src="js/carousel.js" defer></script>
-<script src="js/banner.js"></script>
+<script src="js/banner.js" defer></script>
 </body>
 </html>
