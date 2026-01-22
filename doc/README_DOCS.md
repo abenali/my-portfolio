@@ -9,7 +9,7 @@
 
 Si vous n'avez que 5 minutes:
 
-1. Ouvrir: **`SYNTHESE_FINALE.md`**
+1. Ouvrir: **[SYNTHESE_FINALE.md](SYNTHESE_FINALE.md)**
 2. Lire la section "Ce qui a été livré"
 3. Vérifier "Prochaines actions"
 4. C'est tout! ✅
@@ -18,7 +18,7 @@ Si vous n'avez que 5 minutes:
 
 ## 📖 Lecture Recommandée (En ordre)
 
-### 1️⃣ **SYNTHESE_FINALE.md** (5-10 min) ⭐ START HERE
+### 1️⃣ **[SYNTHESE_FINALE.md](SYNTHESE_FINALE.md)** (5-10 min) ⭐ START HERE
 - ✅ Ce qui a été livré
 - ✅ Améliorations par catégorie
 - ✅ Points importants avant merger
@@ -29,7 +29,7 @@ Si vous n'avez que 5 minutes:
 
 ---
 
-### 2️⃣ **RAPPORT_FINAL.md** (10 min) 📋
+### 2️⃣ **[RAPPORT_FINAL.md](RAPPORT_FINAL.md)** (10 min) 📋
 - ✅ Tâches complétées (checklist)
 - ✅ Statistiques des changements
 - ✅ Fichiers créés/modifiés
@@ -40,7 +40,7 @@ Si vous n'avez que 5 minutes:
 
 ---
 
-### 3️⃣ **SYNTHESE.md** (15 min) 📊
+### 3️⃣ **[SYNTHESE.md](SYNTHESE.md)** (15 min) 📊
 - ✅ Ce qui marche bien (7 points)
 - ✅ Ce qui peut être amélioré (7 catégories)
 - ✅ Détails de chaque amélioration (avant/après)
@@ -51,7 +51,7 @@ Si vous n'avez que 5 minutes:
 
 ---
 
-### 4️⃣ **ROADMAP.md** (15 min) 🗺️
+### 4️⃣ **[ROADMAP.md](ROADMAP.md)** (15 min) 🗺️
 - ✅ Phase 2 détaillée (A. Refactoring, B. Performance, C. Accessibilité, etc.)
 - ✅ Phase 3 optionnel
 - ✅ Quick wins (2-3h)
@@ -62,7 +62,7 @@ Si vous n'avez que 5 minutes:
 
 ---
 
-### 5️⃣ **IMPROVEMENTS.md** (Tech details)
+### 5️⃣ **[IMPROVEMENTS.md](IMPROVEMENTS.md)** (Tech details)
 - ✅ Documentation détaillée de chaque amélioration
 - ✅ Code avant/après
 - ✅ Impact sur chaque fonctionnalité
@@ -72,7 +72,7 @@ Si vous n'avez que 5 minutes:
 
 ---
 
-### 6️⃣ **ANALYSE_CODE.md** (Reference)
+### 6️⃣ **[ANALYSE_CODE.md](ANALYSE_CODE.md)** (Reference)
 - ✅ Analyse initiale complète (original)
 - ✅ Tous les problèmes identifiés
 - ✅ Suggestions détaillées
@@ -85,9 +85,9 @@ Si vous n'avez que 5 minutes:
 
 ### 👨‍💼 Manager / Product Owner?
 **Lire dans cet ordre:**
-1. SYNTHESE_FINALE.md (5 min)
-2. SYNTHESE.md - sections "Ce qui marche bien" + "Ce qui peut être amélioré" (5 min)
-3. ROADMAP.md - timeline (5 min)
+1. [SYNTHESE_FINALE.md](SYNTHESE_FINALE.md) (5 min)
+2. [SYNTHESE.md](SYNTHESE.md) - sections "Ce qui marche bien" + "Ce qui peut être amélioré" (5 min)
+3. [ROADMAP.md](ROADMAP.md) - timeline (5 min)
 
 **Total: 15 min** ✅
 
@@ -95,9 +95,9 @@ Si vous n'avez que 5 minutes:
 
 ### 👨‍💻 Développeur?
 **Lire dans cet ordre:**
-1. SYNTHESE_FINALE.md (5 min)
-2. SYNTHESE.md - section "Améliorations implémentées" (10 min)
-3. IMPROVEMENTS.md - détails techniques (20 min)
+1. [SYNTHESE_FINALE.md](SYNTHESE_FINALE.md) (5 min)
+2. [SYNTHESE.md](SYNTHESE.md) - section "Améliorations implémentées" (10 min)
+3. [IMPROVEMENTS.md](IMPROVEMENTS.md) - détails techniques (20 min)
 4. Vérifier le code modifié (30 min):
    - `js/banner.js` (sécurité)
    - `js/carousel.js` (keyboard nav)
@@ -111,9 +111,9 @@ Si vous n'avez que 5 minutes:
 
 ### 🔒 Sécurité / Compliance?
 **Lire dans cet ordre:**
-1. SYNTHESE_FINALE.md - sections "SÉCURITÉ" (5 min)
-2. SYNTHESE.md - catégorie "SÉCURITÉ" (5 min)
-3. IMPROVEMENTS.md - améliorations sécurité (10 min)
+1. [SYNTHESE_FINALE.md](SYNTHESE_FINALE.md) - sections "SÉCURITÉ" (5 min)
+2. [SYNTHESE.md](SYNTHESE.md) - catégorie "SÉCURITÉ" (5 min)
+3. [IMPROVEMENTS.md](IMPROVEMENTS.md) - améliorations sécurité (10 min)
 4. Code check: `index.html` + `js/banner.js` (15 min)
 
 **Focus**: Masquage données + Cookies sécurisés + Error handling
@@ -124,9 +124,9 @@ Si vous n'avez que 5 minutes:
 
 ### ♿ Accessibilité / QA?
 **Lire dans cet ordre:**
-1. SYNTHESE_FINALE.md - sections "ACCESSIBILITÉ" (5 min)
-2. SYNTHESE.md - catégorie "ACCESSIBILITÉ" (5 min)
-3. ROADMAP.md - Phase 2C "Accessibilité" (5 min)
+1. [SYNTHESE_FINALE.md](SYNTHESE_FINALE.md) - sections "ACCESSIBILITÉ" (5 min)
+2. [SYNTHESE.md](SYNTHESE.md) - catégorie "ACCESSIBILITÉ" (5 min)
+3. [ROADMAP.md](ROADMAP.md) - Phase 2C "Accessibilité" (5 min)
 4. Tester:
    - [ ] Carousels au clavier (Arrow keys)
    - [ ] Menu mobile (Escape key)
@@ -140,13 +140,15 @@ Si vous n'avez que 5 minutes:
 ## 📂 Structure des Fichiers
 
 ```
-Documentation/:
-├── SYNTHESE_FINALE.md (⭐ START HERE)
-├── RAPPORT_FINAL.md (Checklist + stats)
-├── SYNTHESE.md (Vue d'ensemble)
-├── ROADMAP.md (Phases 2 & 3)
-├── IMPROVEMENTS.md (Détails tech)
-└── ANALYSE_CODE.md (Analyse initiale)
+documentation/:
+├── START_HERE.md
+├── SYNTHESE_FINALE.md
+├── RAPPORT_FINAL.md
+├── SYNTHESE.md
+├── ROADMAP.md
+├── IMPROVEMENTS.md
+├── ANALYSE_CODE.md
+└── ...
 
 Code modifié/:
 ├── index.html (données masquées)
@@ -162,7 +164,7 @@ Code modifié/:
 
 **À faire avant de merger `develop` → `main`:**
 
-- [ ] Lire SYNTHESE_FINALE.md
+- [ ] Lire [SYNTHESE_FINALE.md](SYNTHESE_FINALE.md)
 - [ ] Tester sur mobile (carousel, menu, scroll)
 - [ ] Tester au clavier (Arrow keys, Tab, Escape)
 - [ ] Tests cross-browser (Chrome, Firefox, Safari, Edge)
@@ -210,10 +212,10 @@ git push origin main
 **A:** Oui! Dès que vous validez les tests. Aucune dépendance nouvelle.
 
 ### Q: Qu'est-ce qu'on fait après?
-**A:** Lire ROADMAP.md pour Phase 2 & 3. ~15h pour production-ready complet.
+**A:** Lire [ROADMAP.md](ROADMAP.md) pour Phase 2 & 3. ~15h pour production-ready complet.
 
 ### Q: J'ai des questions?
-**A:** Voir SYNTHESE.md + IMPROVEMENTS.md. Tout est documenté.
+**A:** Voir [SYNTHESE.md](SYNTHESE.md) + [IMPROVEMENTS.md](IMPROVEMENTS.md). Tout est documenté.
 
 ---
 
@@ -221,13 +223,13 @@ git push origin main
 
 | Vous vous demandez... | Lisez... |
 |----------------------|----------|
-| "Quoi de neuf?" | SYNTHESE_FINALE.md |
-| "Quelles tâches ont été faites?" | RAPPORT_FINAL.md |
-| "Comment ça marche?" | IMPROVEMENTS.md |
-| "Quoi faire ensuite?" | ROADMAP.md |
-| "Y a-t-il des problèmes?" | SYNTHESE.md |
-| "Comment tester?" | RAPPORT_FINAL.md - Checklist |
-| "Comment merger?" | SYNTHESE_FINALE.md + git commands |
+| "Quoi de neuf?" | [SYNTHESE_FINALE.md](SYNTHESE_FINALE.md) |
+| "Quelles tâches ont été faites?" | [RAPPORT_FINAL.md](RAPPORT_FINAL.md) |
+| "Comment ça marche?" | [IMPROVEMENTS.md](IMPROVEMENTS.md) |
+| "Quoi faire ensuite?" | [ROADMAP.md](ROADMAP.md) |
+| "Y a-t-il des problèmes?" | [SYNTHESE.md](SYNTHESE.md) |
+| "Comment tester?" | [RAPPORT_FINAL.md](RAPPORT_FINAL.md) - Checklist |
+| "Comment merger?" | [SYNTHESE_FINALE.md](SYNTHESE_FINALE.md) + git commands |
 
 ---
 
@@ -235,12 +237,12 @@ git push origin main
 
 | Fichier | Lecteur | Temps |
 |---------|---------|-------|
-| SYNTHESE_FINALE.md | Tous | 5-10 min |
-| RAPPORT_FINAL.md | Dev/Manager | 10 min |
-| SYNTHESE.md | Manager/Lead | 15 min |
-| ROADMAP.md | Manager/Lead | 15 min |
-| IMPROVEMENTS.md | Dev | 20 min |
-| ANALYSE_CODE.md | Dev | 30 min |
+| [SYNTHESE_FINALE.md](SYNTHESE_FINALE.md) | Tous | 5-10 min |
+| [RAPPORT_FINAL.md](RAPPORT_FINAL.md) | Dev/Manager | 10 min |
+| [SYNTHESE.md](SYNTHESE.md) | Manager/Lead | 15 min |
+| [ROADMAP.md](ROADMAP.md) | Manager/Lead | 15 min |
+| [IMPROVEMENTS.md](IMPROVEMENTS.md) | Dev | 20 min |
+| [ANALYSE_CODE.md](ANALYSE_CODE.md) | Dev | 30 min |
 | **Total min** | - | **~90 min** |
 | **Total express** | - | **~15 min** |
 
@@ -262,7 +264,7 @@ git push origin main
 - Production deployment
 
 ✅ **Prochaine étape:**
-- Lire SYNTHESE_FINALE.md (5 min)
+- Lire [SYNTHESE_FINALE.md](SYNTHESE_FINALE.md) (5 min)
 - Tester (1h)
 - Merger si OK
 - Deploy

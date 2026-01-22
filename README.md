@@ -5,32 +5,34 @@ Portfolio de Abdessamad Benali, Consultant PHP/Symfony Senior.
 ## 🚀 Quick Start
 
 Lisez dans cet ordre:
-1. **START_HERE.md** - Point de départ (2 min)
-2. **EXECUTIVE_SUMMARY.md** - Résumé des changements (2 min)
+1. **[START_HERE.md](doc/START_HERE.md)** - Point de départ (2 min)
+2. **[EXECUTIVE_SUMMARY.md](doc/EXECUTIVE_SUMMARY.md)** - Résumé des changements (2 min)
 3. Le reste de la documentation
 
 ## 📊 État Actuel
 
 - ✅ Phase 1 complétée (améliorations critiques)
 - ✅ Branche `develop` créée avec code production-ready
-- ✅ 10 fichiers de documentation complète
+- ✅ 12 fichiers de documentation complète
 - ⏳ Phase 2 à venir (refactoring + optimisations)
 
 ## 📁 Documentation
 
 ### Pour commencer rapidement
-- **START_HERE.md** - Lisez ça d'abord!
-- **EXECUTIVE_SUMMARY.md** - Résumé 2 min
-- **FINAL_SUMMARY.md** - Résumé final
+- **[START_HERE.md](doc/START_HERE.md)** - Lisez ça d'abord!
+- **[EXECUTIVE_SUMMARY.md](doc/EXECUTIVE_SUMMARY.md)** - Résumé 2 min
+- **[FINAL_SUMMARY.md](doc/FINAL_SUMMARY.md)** - Résumé final
+- **[QUICK_REF.md](doc/QUICK_REF.md)** - Référence rapide 30 sec
 
 ### Analyse complète
-- **SYNTHESE.md** - Analyse détaillée du code
-- **SYNTHESE_FINALE.md** - Vue d'ensemble
-- **RAPPORT_FINAL.md** - Checklist & statistiques
-- **IMPROVEMENTS.md** - Détails techniques
-- **ROADMAP.md** - Phases 2 & 3
-- **README_DOCS.md** - Guide de lecture
-- **INDEX.md** - Table des matières
+- **[SYNTHESE.md](doc/SYNTHESE.md)** - Analyse détaillée du code
+- **[SYNTHESE_FINALE.md](doc/SYNTHESE_FINALE.md)** - Vue d'ensemble
+- **[RAPPORT_FINAL.md](doc/RAPPORT_FINAL.md)** - Checklist & statistiques
+- **[IMPROVEMENTS.md](doc/IMPROVEMENTS.md)** - Détails techniques
+- **[ROADMAP.md](doc/ROADMAP.md)** - Phases 2 & 3
+- **[README_DOCS.md](doc/README_DOCS.md)** - Guide de lecture
+- **[INDEX.md](doc/INDEX.md)** - Table des matières
+- **[ANALYSE_CODE.md](doc/ANALYSE_CODE.md)** - Analyse initiale
 
 ## 🔧 Technologie
 
@@ -49,7 +51,7 @@ Lisez dans cet ordre:
 ## 🚀 Prochaines Étapes
 
 ### Immédiatement
-1. Lire START_HERE.md (2 min)
+1. Lire [START_HERE.md](doc/START_HERE.md) (2 min)
 2. Tester en local (1-2h)
 3. Merger develop → main quand prêt
 
@@ -59,7 +61,7 @@ Lisez dans cet ordre:
 - Consolidation CSS
 - Tests & linting
 
-Voir `ROADMAP.md` pour détails.
+Voir [ROADMAP.md](doc/ROADMAP.md) pour détails.
 
 ## 📝 Git Workflow
 
@@ -76,10 +78,10 @@ git push origin main
 ## 📞 Questions?
 
 Consultez la documentation:
-- **"Quoi de neuf?"** → `EXECUTIVE_SUMMARY.md`
-- **"Comment j'lis tout ça?"** → `README_DOCS.md`
-- **"Comment je teste?"** → `RAPPORT_FINAL.md`
-- **"Et après?"** → `ROADMAP.md`
+- **"Quoi de neuf?"** → [EXECUTIVE_SUMMARY.md](doc/EXECUTIVE_SUMMARY.md)
+- **"Comment j'lis tout ça?"** → [README_DOCS.md](doc/README_DOCS.md)
+- **"Comment je teste?"** → [RAPPORT_FINAL.md](doc/RAPPORT_FINAL.md)
+- **"Et après?"** → [ROADMAP.md](doc/ROADMAP.md)
 
 ---
 

@@ -74,7 +74,7 @@ Breaking Changes: 0 ✅
 - [x] Branche isolée (`develop`)
 
 ### ⏳ À Faire
-- [ ] Lire `EXECUTIVE_SUMMARY.md` (2 min)
+- [ ] Lire [EXECUTIVE_SUMMARY.md](EXECUTIVE_SUMMARY.md) (2 min)
 - [ ] Tester sur mobile/clavier (1h)
 - [ ] Tests cross-browser (30 min)
 - [ ] Review code (30 min)
@@ -88,15 +88,15 @@ Breaking Changes: 0 ✅
 ## 📚 Où Commencer?
 
 ### Pour tout le monde
-1. Ouvrir: **`EXECUTIVE_SUMMARY.md`** (lisez ça d'abord!)
-2. Puis: **`SYNTHESE_FINALE.md`** (5 min)
+1. Ouvrir: **[EXECUTIVE_SUMMARY.md](EXECUTIVE_SUMMARY.md)** (lisez ça d'abord!)
+2. Puis: **[SYNTHESE_FINALE.md](SYNTHESE_FINALE.md)** (5 min)
 
 ### Pour les devs
-3. Puis: **`IMPROVEMENTS.md`** (détails techniques)
+3. Puis: **[IMPROVEMENTS.md](IMPROVEMENTS.md)** (détails techniques)
 4. Puis: Review le code modifié
 
 ### Pour la suite
-5. Puis: **`ROADMAP.md`** (phases 2 & 3)
+5. Puis: **[ROADMAP.md](ROADMAP.md)** (phases 2 & 3)
 
 ---
 
