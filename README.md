@@ -1,6 +1,7 @@
-# Webben Digital - Portfolio
+# Abdessamad Benali - Portfolio
 
 Portfolio de Abdessamad Benali, Consultant PHP/Symfony Senior.
+Dirigeant de Webben Digital.
 
 ## 🚀 Quick Start
 
