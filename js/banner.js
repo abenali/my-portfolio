@@ -24,48 +24,112 @@
     const acceptBtn = document.getElementById('cookie-accept');
     const declineBtn = document.getElementById('cookie-decline');
     
-    // Cookie utilities
+    // Validate DOM elements exist
+    if (!banner || !acceptBtn || !declineBtn) {
+        console.warn('Cookie banner elements not found in DOM');
+        return;
+    }
+
+    /**
+     * Cookie utilities with improved security
+     * Properly decodes cookie values and handles edge cases
+     */
     const cookieUtils = {
+        /**
+         * Get a cookie value by name with proper decoding
+         * @param {string} name - Cookie name
+         * @returns {string|null} - Decoded cookie value or null
+         */
         get(name) {
-            const cookieString = document.cookie.split('; ')
-                .find(row => row.startsWith(name + '='));
-            return cookieString ? cookieString.split('=')[1] : null;
+            try {
+                const nameEQ = `${name}=`;
+                const cookies = document.cookie.split(';');
+
+                for (let cookie of cookies) {
+                    cookie = cookie.trim();
+                    if (cookie.startsWith(nameEQ)) {
+                        return decodeURIComponent(cookie.substring(nameEQ.length));
+                    }
+                }
+                return null;
+            } catch (error) {
+                console.warn(`Error reading cookie "${name}":`, error);
+                return null;
+            }
         },
         
+        /**
+         * Set a cookie with proper encoding
+         * @param {string} name - Cookie name
+         * @param {string} value - Cookie value
+         * @param {number} days - Days until expiration
+         */
         set(name, value, days) {
-            const date = new Date();
-            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-            document.cookie = `${name}=${value};expires=${date.toUTCString()};path=/`;
+            try {
+                const date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                const expires = `expires=${date.toUTCString()}`;
+                const encodedValue = encodeURIComponent(value);
+                document.cookie = `${name}=${encodedValue};${expires};path=/`;
+            } catch (error) {
+                console.error(`Error setting cookie "${name}":`, error);
+            }
         }
     };
     
-    // Google Analytics consent update
+    /**
+     * Update Google Analytics consent with error handling
+     * @param {string} consentLevel - 'granted' or 'denied'
+     */
     function updateConsent(consentLevel) {
-        if (typeof gtag === 'function') {
-            gtag('consent', 'update', CONSENT_CONFIG[consentLevel]);
+        try {
+            // Check if gtag is available (from Google Analytics script)
+            if (typeof window.gtag === 'function') {
+                const config = CONSENT_CONFIG[consentLevel];
+                if (config) {
+                    window.gtag('consent', 'update', config);
+                }
+            }
+        } catch (error) {
+            console.warn('Google Analytics consent update failed:', error);
         }
     }
     
-    // Handle consent choice
+    /**
+     * Handle user consent choice
+     * @param {string} consentLevel - 'granted' or 'denied'
+     */
     function handleConsent(consentLevel) {
-        cookieUtils.set(COOKIE_NAME, consentLevel, COOKIE_DAYS);
-        banner.style.display = 'none';
-        updateConsent(consentLevel);
+        try {
+            cookieUtils.set(COOKIE_NAME, consentLevel, COOKIE_DAYS);
+            banner.style.display = 'none';
+            updateConsent(consentLevel);
+        } catch (error) {
+            console.error('Error handling consent:', error);
+        }
     }
     
-    // Initialize banner
+    /**
+     * Initialize the cookie banner
+     */
     function init() {
-        const consent = cookieUtils.get(COOKIE_NAME);
-        
-        if (!consent) {
-            banner.style.display = 'block';
-        } else if (consent === 'granted') {
-            updateConsent('granted');
+        try {
+            const consent = cookieUtils.get(COOKIE_NAME);
+
+            // Show banner if no previous consent
+            if (!consent) {
+                banner.style.display = 'block';
+            } else if (consent === 'granted') {
+                // Reapply consent on page reload
+                updateConsent('granted');
+            }
+
+            // Attach event listeners
+            acceptBtn.addEventListener('click', () => handleConsent('granted'));
+            declineBtn.addEventListener('click', () => handleConsent('denied'));
+        } catch (error) {
+            console.error('Cookie banner initialization failed:', error);
         }
-        
-        // Event listeners
-        acceptBtn.addEventListener('click', () => handleConsent('granted'));
-        declineBtn.addEventListener('click', () => handleConsent('denied'));
     }
     
     // Start when DOM is ready
