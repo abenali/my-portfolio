@@ -535,27 +535,9 @@ textarea {
         font-size: 0.9rem;
     }
 
-    .services-table {
-        font-size: 0.9rem;
-    }
-
     .testimonial {
         flex: 0 0 50%;
         margin: 0 auto;
-    }
-}
-
-@media (max-width: 767px) {
-    .services-header,
-    .services-row {
-        grid-template-columns: 1.5fr 1fr;
-    }
-
-    .services-header span:nth-child(3),
-    .services-header span:nth-child(4),
-    .services-row > :nth-child(3),
-    .services-row > :nth-child(4) {
-        display: none;
     }
 }
 
@@ -624,6 +606,10 @@ textarea {
     background: var(--color-accent-soft);
 }
 
+.logos-arrow:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
 
 
 .logos-dots {
@@ -658,6 +644,7 @@ textarea {
 
 .testi-viewport {
     overflow: hidden;
+    min-width: 0;
 }
 
 .testi-track {
@@ -669,6 +656,7 @@ textarea {
 .testimonial {
     flex: 0 0 100%;
     max-width: 100%;
+    margin: 0;
 }
 
 
@@ -692,6 +680,10 @@ textarea {
     background: var(--color-accent-soft);
 }
 
+.testi-arrow:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
 
 
 .testi-dots {

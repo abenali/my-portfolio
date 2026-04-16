@@ -5,20 +5,21 @@
  * @param {string} itemSelector - CSS selector for carousel items
  * @param {string} prevBtnSelector - CSS selector for previous button
  * @param {string} nextBtnSelector - CSS selector for next button
- * @param {string} dotsSelector - CSS selector for pagination dots
+ * @param {string} dotsContainerSelector - CSS selector for pagination dots container
  * @param {number} visibleCount - Number of items visible at once (default: 3)
+ * @param {string} dotClass - CSS class for generated dots
  * @returns {Object} Carousel instance with destroy method for cleanup
  *
  * @example
- * createCarousel('.logos-track', '.logo-item', '.logos-arrow-left', '.logos-arrow-right', '.logos-dots .dot', 3);
+ * createCarousel('.logos-track', '.logo-item', '.logos-arrow-left', '.logos-arrow-right', '.logos-dots', 3, 'dot');
  */
-function createCarousel(trackSelector, itemSelector, prevBtnSelector, nextBtnSelector, dotsSelector, visibleCount = 3) {
+function createCarousel(trackSelector, itemSelector, prevBtnSelector, nextBtnSelector, dotsContainerSelector, visibleCount = 3, dotClass = 'dot') {
     // Get DOM elements with error handling
     const track = document.querySelector(trackSelector);
     const items = Array.from(document.querySelectorAll(itemSelector));
     const prevBtn = document.querySelector(prevBtnSelector);
     const nextBtn = document.querySelector(nextBtnSelector);
-    const dots = Array.from(document.querySelectorAll(dotsSelector));
+    const dotsContainer = document.querySelector(dotsContainerSelector);
 
     // Validate carousel elements exist
     if (!track) {
@@ -33,7 +34,49 @@ function createCarousel(trackSelector, itemSelector, prevBtnSelector, nextBtnSel
 
     let currentIndex = 0;
     const maxIndex = Math.max(0, items.length - visibleCount);
+    const pageCount = maxIndex + 1;
+    let dots = [];
     const eventListeners = [];
+
+    /**
+     * Build pagination dots based on the number of available pages
+     */
+    function buildDots() {
+        if (!dotsContainer) {
+            return;
+        }
+
+        dotsContainer.innerHTML = '';
+        dots = [];
+
+        for (let i = 0; i < pageCount; i += 1) {
+            const dot = document.createElement('button');
+            dot.type = 'button';
+            dot.className = dotClass;
+            dot.setAttribute('aria-label', `Slide ${i + 1}`);
+            dotsContainer.appendChild(dot);
+            dots.push(dot);
+        }
+    }
+
+    /**
+     * Calculate horizontal movement distance between two carousel items
+     * Uses actual DOM offsets and falls back to CSS gap + item width.
+     * @returns {number}
+     */
+    function getStepSize() {
+        if (items.length > 1) {
+            const offsetDelta = items[1].offsetLeft - items[0].offsetLeft;
+            if (offsetDelta > 0) {
+                return offsetDelta;
+            }
+        }
+
+        const itemWidth = items[0]?.getBoundingClientRect().width || 0;
+        const trackStyle = window.getComputedStyle(track);
+        const gap = parseFloat(trackStyle.gap || trackStyle.columnGap || '0') || 0;
+        return itemWidth + gap;
+    }
 
     /**
      * Update carousel position and pagination
@@ -42,16 +85,26 @@ function createCarousel(trackSelector, itemSelector, prevBtnSelector, nextBtnSel
     function updateCarousel(index) {
         try {
             currentIndex = Math.min(Math.max(index, 0), maxIndex);
-            const itemWidth = items[0]?.getBoundingClientRect().width + 24 || 0;
+            const stepSize = getStepSize();
 
-            if (itemWidth > 0) {
-                track.style.transform = `translateX(${-currentIndex * itemWidth}px)`;
+            if (stepSize > 0) {
+                track.style.transform = `translateX(${-currentIndex * stepSize}px)`;
             }
 
             // Update active dot
             dots.forEach((dot, i) => {
                 dot.classList.toggle('is-active', i === currentIndex);
             });
+
+            if (prevBtn) {
+                prevBtn.disabled = currentIndex === 0;
+                prevBtn.setAttribute('aria-disabled', String(currentIndex === 0));
+            }
+
+            if (nextBtn) {
+                nextBtn.disabled = currentIndex === maxIndex;
+                nextBtn.setAttribute('aria-disabled', String(currentIndex === maxIndex));
+            }
         } catch (error) {
             console.error('[Carousel] Error updating carousel:', error);
         }
@@ -85,6 +138,7 @@ function createCarousel(trackSelector, itemSelector, prevBtnSelector, nextBtnSel
     }
 
     // Add event listeners for dots
+    buildDots();
     dots.forEach((dot, i) => {
         const dotListener = () => updateCarousel(i);
         dot.addEventListener('click', dotListener);
@@ -119,8 +173,8 @@ function createCarousel(trackSelector, itemSelector, prevBtnSelector, nextBtnSel
 // Initialize carousels
 (function() {
     try {
-        createCarousel('.logos-track', '.logo-item', '.logos-arrow-left', '.logos-arrow-right', '.logos-dots .dot', 3);
-        createCarousel('.testi-track', '.testi-track .testimonial', '.testi-arrow-left', '.testi-arrow-right', '.testi-dots .testi-dot', 1);
+        createCarousel('.logos-track', '.logo-item', '.logos-arrow-left', '.logos-arrow-right', '.logos-dots', 3, 'dot');
+        createCarousel('.testi-track', '.testi-track .testimonial', '.testi-arrow-left', '.testi-arrow-right', '.testi-dots', 1, 'testi-dot');
     } catch (error) {
         console.error('[Carousel] Initialization failed:', error);
     }
