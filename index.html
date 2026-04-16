@@ -133,10 +133,10 @@
             <span class="logo-text">Abdessamad Benali - Webben Digital</span>
         </a>
         <nav class="main-nav">
-            <button class="nav-toggle" aria-label="Ouvrir le menu">
+            <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-nav-links">
                 ☰
             </button>
-            <ul class="nav-links">
+            <ul class="nav-links" id="main-nav-links">
                 <li><a href="#hero">Accueil</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#cases">Missions</a></li>
@@ -189,7 +189,7 @@
                         <span>API</span>
                         <span>REST / GraphQL</span>
                         <span>SQL (PostgreSql / MySql / Oracle)</span>
-                        <span>NoSQL (MangoDB)</span>
+                        <span>NoSQL (MongoDB)</span>
                         <span>Agilité</span>
                         <span>Jira / Confluence</span>
                         <span>Code Review</span>
@@ -357,7 +357,7 @@
                 </button>
 
                 <div class="testi-viewport">
-                    <div class="testi-track">
+                    <div class="testi-track" tabindex="0">
                         <figure class="testimonial card">
                             <blockquote>
                                 “Il saisit très vite les besoins, apporte des solutions claires
@@ -390,11 +390,7 @@
                 </button>
             </div>
 
-            <div class="testi-dots">
-                <button class="testi-dot is-active" aria-label="Recommandation 1"></button>
-                <button class="testi-dot" aria-label="Recommandation 2"></button>
-                <!-- ajoute / enlève des .testi-dot selon le nombre de testimonials -->
-            </div>
+            <div class="testi-dots" aria-label="Pagination des recommandations"></div>
         </div>
     </section>
 
@@ -413,7 +409,7 @@
                 </button>
 
                 <div class="logos-viewport">
-                    <div class="logos-track">
+                    <div class="logos-track" tabindex="0">
                         <div class="logo-item">
                             <div class="logo-circle">
                                 <img src="logos/carma.png" alt="Carrefour Assurance">
@@ -483,14 +479,7 @@
                 </button>
             </div>
 
-            <div class="logos-dots">
-                <button class="dot is-active" aria-label="Slide 1"></button>
-                <button class="dot" aria-label="Slide 2"></button>
-                <button class="dot" aria-label="Slide 3"></button>
-                <button class="dot" aria-label="Slide 4"></button>
-                <button class="dot" aria-label="Slide 5"></button>
-                <!-- Ajuste le nombre de points si tu as plus de slides -->
-            </div>
+            <div class="logos-dots" aria-label="Pagination des références"></div>
         </div>
     </section>
 
@@ -510,12 +499,12 @@
                         Préférez un échange rapide&nbsp;? Réservez directement un créneau de 30 minutes
                         pour parler de votre contexte.
                     </p>
-                    <a href="https://calendly.com/webben-digital/30min" class="btn btn-outline" target="_blank">
+                    <a href="https://calendly.com/webben-digital/30min" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
                         Réserver un appel
                     </a>
                     <p class="contact-note">
                         Ou contactez‑moi sur <a href="https://www.linkedin.com/in/abdessamadbenali" target="_blank"
-                                                rel="noopener">LinkedIn</a>
+                                                rel="noopener noreferrer">LinkedIn</a>
                     </p>
                 </section>
             </div>
